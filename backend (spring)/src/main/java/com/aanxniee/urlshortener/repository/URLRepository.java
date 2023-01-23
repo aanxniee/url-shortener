@@ -1,4 +1,7 @@
 package com.aanxniee.urlshortener.repository;
 
-public interface URLRepository {
+import com.aanxniee.urlshortener.modal.URL;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface URLRepository extends JpaRepository<URL, Integer> {
 }
