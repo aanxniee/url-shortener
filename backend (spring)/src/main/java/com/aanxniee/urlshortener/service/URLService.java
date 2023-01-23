@@ -16,12 +16,15 @@ public class URLService {
     public String getOriginalUrl(String id) {
         return urlRepository.findByShortUrl(id);
     }
+
     public URL generateShortUrl(String url) {
+        // checks if the inputted url is valid
         if (! isUrlValid(url)) {
             System.out.println("URL is not valid");
             return null;
         }
 
+        // create new URL object
         URL urlObject = new URL();
         urlObject.setOriginalURL(url);
         urlObject.setShortURL(getShortUrl(url));
