@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // marks class as a request handler, creates RESTful API calls
-@RequestMapping // maps requests onto specific handlers
+@RequestMapping("/url/shortener") // maps requests onto specific handlers
 public class URLController {
     @Autowired
     private URLService urlService;
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     // handles HTTPs GET requests, retrieves URL by specified id
     public String getOriginalUrl(@PathVariable String id) {
         return urlService.getOriginalUrl(id);
