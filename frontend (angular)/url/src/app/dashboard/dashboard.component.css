@@ -1,0 +1,69 @@
+.box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.title {
+    width: 50%;
+    margin-top: 10%;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+.card {
+    width: 50%;
+    margin: 15px;
+    background-color: var(--tertiary-color);
+}
+
+.form-control {
+    background-color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.form-control:focus {
+    border-color: var(--tertiary-color);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01), 0 0 8px rgba(255, 165, 0, 0.6);
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color-dark);
+}
+
+.alert {
+    margin-top: 10px;
+    background-color: var(--light-color);
+    border-color: var(--secondary-color);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01), 0 0 8px rgba(255, 165, 0, 0.6);
+}
+
+.url {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.link {
+    color: var(--secondary-color-dark);
+}
+
+.qr {
+    margin-top: 10px;
+}

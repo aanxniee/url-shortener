@@ -1,31 +1,25 @@
-<div class="container">
-    <div class="row">
-        <h3 class="text-center text-primary m-3">Link.ly</h3>
-    </div>
-
-    <div class="row shadow mt-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Enter a link" [(ngModel)] =  "url" aria-label="Enter a link" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-primary" type="button" (click) = "generateShortUrl()" id="button-addon2">Create</button>
-                  </div>
+<div class="box">
+    <span class="title"><img class="logo" src="assets/icon.png"><h2 class="text-center">Link.ly</h2></span>
+    <div class="card">
+        <div class="card-body">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter a link" [(ngModel)] =  "url" aria-label="Enter a link" aria-describedby="button-addon2">
+                <button class="btn" type="button" (click) = "generateShortUrl()" id="button-addon2">Create</button>
             </div>
-          </div>
+        </div>
     </div>
-
-    <div class="row shadow mt-3" *ngIf="isUrlGenerated || isErrorGenerated">
-        <div class="card">
-            <div class="card-body">
-                <div *ngIf="isErrorGenerated">
-                    <div class="alert alert-danger" role="alert">
-                        Please enter a valid link!
-                      </div>
+    <div class="card" *ngIf="isUrlGenerated || isErrorGenerated">
+    
+        <div class="card-body">
+            <div *ngIf="isErrorGenerated">
+                <div class="alert" role="alert">
+                    Please enter a valid link!
                 </div>
-                <div *ngIf="isUrlGenerated">
-                    <h6>Shortened link : <a href="{{originalUrl}}" target="_blank">http://link.ly/{{shortUrl}}</a></h6>
-                    <qrcode [qrdata]="originalUrl" [width]="128" [errorCorrectionLevel]="'M'"></qrcode>
-                </div>
+            </div>
+            
+            <div class="url" *ngIf="isUrlGenerated">
+                <h6>Shortened Link:<br><a class="link" href="{{originalUrl}}" target="_blank">http://link.ly/{{shortUrl}}</a></h6>
+                <qrcode class="qr" [qrdata]="originalUrl" [width]="128" [errorCorrectionLevel]="'M'"></qrcode>
             </div>
         </div>
     </div>

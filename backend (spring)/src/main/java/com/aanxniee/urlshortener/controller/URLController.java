@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // marks class as a request handler, creates RESTful API calls
-@RequestMapping("/") // maps requests onto specific handlers
+@RequestMapping("/url/") // maps requests onto specific handlers
 @CrossOrigin(origins = "http://localhost:4200")
 public class URLController {
     @Autowired
