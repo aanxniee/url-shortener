@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UrlShortService } from '../services/url-short.service';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -28,6 +29,7 @@ export class DashboardComponent implements OnInit {
         this.isUrlGenerated = true;
         this.shortUrl = res.shortURL;
         this.originalUrl = res.originalURL;
+        console.log(this.originalUrl);
       }
     }, err=>{
       this.isUrlGenerated = false;

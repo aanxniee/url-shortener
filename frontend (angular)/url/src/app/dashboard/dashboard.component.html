@@ -24,6 +24,7 @@
                 </div>
                 <div *ngIf="isUrlGenerated">
                     <h6>Shortened link : <a href="{{originalUrl}}" target="_blank">http://localhost:8080/url/shortener/{{shortUrl}}</a></h6>
+                    <qrcode [qrdata]="originalUrl" [width]="128" [errorCorrectionLevel]="'M'"></qrcode>
                 </div>
             </div>
         </div>
