@@ -14,10 +14,17 @@
           </div>
     </div>
 
-    <div class="row shadow mt-3">
+    <div class="row shadow mt-3" *ngIf="isUrlGenerated || isErrorGenerated">
         <div class="card">
             <div class="card-body">
-                Shortened URL : 
+                <div *ngIf="isErrorGenerated">
+                    <div class="alert alert-danger" role="alert">
+                        Please enter a valid link!
+                      </div>
+                </div>
+                <div *ngIf="isUrlGenerated">
+                    <h6>Shortened link : <a href="{{originalUrl}}" target="_blank">http://localhost:8080/url/shortener/{{shortUrl}}</a></h6>
+                </div>
             </div>
         </div>
     </div>
