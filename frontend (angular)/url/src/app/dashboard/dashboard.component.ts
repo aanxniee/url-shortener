@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
-  url : string = ""
+export class DashboardComponent implements OnInit {
+  url : string = "";
   constructor() { }
 
   ngOnInit(): void {
-    
+
+  }
+
+  generateShortUrl() {
+    console.log(this.url);
   }
 }
