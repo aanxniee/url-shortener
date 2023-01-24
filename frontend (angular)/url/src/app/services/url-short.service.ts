@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class UrlShortService {
   serviceUrl : string = " ";
   constructor(private http : HttpClient) { 
-    this.serviceUrl = "http://localhost:8080/url/shortener";
+    this.serviceUrl = "http://localhost:8080/";
   }
 
   getShortUrl(url : string) {
