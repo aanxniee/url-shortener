@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UrlShortService } from '../services/url-short.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   url : string = "";
-  constructor() { }
+  constructor(private urlShortService : UrlShortService) { }
 
   ngOnInit(): void {
 
   }
 
   generateShortUrl() {
-    console.log(this.url);
+    this.urlShortService.getShortUrl(this.url).subscribe(res=>{
+      console.log(res);
+    }, err=>{
+      console.log(err);
+    })
   }
 }
