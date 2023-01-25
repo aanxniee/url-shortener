@@ -12,6 +12,8 @@ export class DashboardComponent implements OnInit {
   isUrlGenerated : boolean = false;
   isErrorGenerated : boolean = false;
   shortUrl : string = "";
+  local : string = "http://localhost:8080/url/";
+  copiedUrl : string = "";
   originalUrl : string = "";
   constructor(private urlShortService : UrlShortService) { }
 
@@ -28,6 +30,7 @@ export class DashboardComponent implements OnInit {
         this.isErrorGenerated = false;
         this.isUrlGenerated = true;
         this.shortUrl = res.shortURL;
+        this.copiedUrl = this.local.concat(this.shortUrl.toString());
         this.originalUrl = res.originalURL;
         console.log(this.originalUrl);
       }

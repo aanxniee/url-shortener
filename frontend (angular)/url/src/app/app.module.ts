@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    QRCodeModule
+    QRCodeModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
