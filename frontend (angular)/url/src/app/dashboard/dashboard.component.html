@@ -1,5 +1,5 @@
 <div class="box">
-    <span class="title"><img class="logo" src="assets/icon.png"><h2 class="text-center">Link.ly</h2></span>
+    <span class="title"><img class="logo" src="assets/icon.png"><h2 class="linkly text-center">Link.ly</h2></span>
     <div class="card">
         <div class="card-body">
             <div class="input-group">
@@ -9,20 +9,16 @@
         </div>
     </div>
     <div class="card" *ngIf="isUrlGenerated || isErrorGenerated">
-    
         <div class="card-body">
             <div *ngIf="isErrorGenerated">
                 <div class="alert" role="alert">
                     Please enter a valid link!
                 </div>
             </div>
-            
             <div class="url" *ngIf="isUrlGenerated">
-                
-                    <h6>Shortened Link:</h6>
-                    <h6><a class="link" href="{{originalUrl}}" target="_blank">http://link.ly/{{shortUrl}}</a></h6>
-                    <button class="btn" [cdkCopyToClipboard]="copiedUrl">Copy</button>
-                
+                <h6>Shortened Link:</h6>
+                <h6><a class="link" href="{{originalUrl}}" target="_blank">http://link.ly/{{shortUrl}}</a></h6>
+                <button class="btn" [cdkCopyToClipboard]="copiedUrl">Copy</button>
                 <qrcode class="qr" [qrdata]="originalUrl" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
             </div>
         </div>
