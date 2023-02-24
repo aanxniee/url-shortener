@@ -2,6 +2,7 @@
 
 Link.ly is a URL shortener. Link.ly takes a long URL and generates a corresponding QR code and short URL using Adler-32 Checksum Hashing. The short URL is created using POST requests and the long URL is fetched using GET requests.
 
+## Tech Stack
 Front-end: Angular/Typescript   
 Backend: Spring Boot/Java   
 Database: SQL  
